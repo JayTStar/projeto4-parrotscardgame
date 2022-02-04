@@ -1,0 +1,43 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+    text-align: center;
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 50px;
+}
+.card {
+    width: 117px;
+    height: 146px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-front{
+    width: 80%;
+    height: auto;
+}
+
+.hidden{
+    display: none;
+}
