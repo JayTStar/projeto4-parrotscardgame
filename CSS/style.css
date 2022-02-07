@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #EEF9BF;
 }
 header {
     width: 100%;
@@ -16,10 +17,11 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px 50px;
+    padding: 0 15%;
 }
 .card {
-    width: 117px;
-    height: 146px;
+    width: 120px;
+    height: 150px;
     background: #A7E9AF;
     border: 1px solid #99CEA8;
     box-sizing: border-box;
@@ -32,10 +34,13 @@ main {
     align-items: center;
     justify-content: center;
 }
-
 .card .card-front{
-    width: 80%;
-    height: auto;
+ width: 90%;
+ height: auto;
+}
+.card .card-back{
+ width: 70px;
+ height: auto;
 }
 
 .hidden{
