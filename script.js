@@ -48,7 +48,7 @@ function displayCards(size){
 
     for(i=0; i<size; i++){
         cardsLeft++
-        local.innerHTML = local.innerHTML + `<div onclick="turnCard(this)" class="card" id="${gameCards[i]}"> <img class="card-front show" src="./Mídias/front.png" alt="Card's front face"> <img class="card-back hidden" src="./Mídias/${gameCards[i]}.gif" alt="Card's back face"> </div>`
+        local.innerHTML = local.innerHTML + `<div onclick="turnCard(this)" class="card" data-identifier="card" id="${gameCards[i]}"> <img data-identifier="back-face" class="card-front show" src="./Mídias/front.png" alt="Card's front face"> <img data-identifier="front-face" class="card-back hidden" src="./Mídias/${gameCards[i]}.gif" alt="Card's back face"> </div>`
     }
     
 }
