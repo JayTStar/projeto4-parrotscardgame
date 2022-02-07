@@ -18,19 +18,15 @@ function startGame(){
 
 function numCheck (num){
     if(num >= 4 && num <= 14){
-        console.log("ta no intervalo");
 
         if(num%2 == 0){
-            console.log("é par");
             return(true);
         }
         else{
-            console.log("não é par");
             return(false);
         }
     }
     else{
-        console.log("não tá no intervalo");
         return(false);
     }
 }
@@ -42,13 +38,11 @@ function random() {
 function displayCards(size){
     const local = document.querySelector("main");
 
-    console.log(gameCards);
 
     for(i=0; i<(size/2); i++){
         for(j=0;j<2;j++){
             gameCards.push(cards[i]);
             gameCards.sort(random);
-            console.log(gameCards);
         }
     }
 
@@ -75,7 +69,6 @@ function turnCard(card){
         jogadas++
     }
     if(parseInt(checkSide()) === 2){
-        console.log("Tem duas cartas viradas");
         checkCards();
     }
     checkSide();
@@ -94,18 +87,15 @@ function checkSide(){
         let checkScore = cardChecking.parentElement.classList.contains("score");
 
         if(checkHidden === true && checkScore === false){
-            console.log("Carta selecionada")
             selectedCards ++
             turnedCards.push(cardsInGame[i].id);
         }
         else{
-            console.log("carta não selecionada");
         }
    }
 
    turnedLength = turnedCards.length;
 
-   console.log(selectedCards);
    return(selectedCards);
 }
 
@@ -114,7 +104,6 @@ function checkCards(){
     const cardsInGame = Array.prototype.slice.call(getCards);
     checkSide();
     if(turnedCards[0] === turnedCards[1]){
-        console.log("são iguais")
 
         cardsLeft = cardsLeft - 2;
 
@@ -125,7 +114,6 @@ function checkCards(){
         
     }
     if(turnedCards[0] != turnedCards[1]){
-        console.log("não são iguais");
 
         setTimeout(restart,1000);
     }
@@ -140,14 +128,11 @@ function restart(){
 
     let length = getCardsBack.length
 
-    console.log(length)
-    console.log(length)
 
     for(i=0; i<length; i++){
 
         if(cardsInGameFront[i].parentElement.classList.contains("score") === false){
 
-            console.log("não está marcada")
             cardsInGameFront[i].classList.toggle("hidden");
             cardsInGameBack[i].classList.toggle("hidden");
             cardsInGameFront[i].classList.toggle("show");
